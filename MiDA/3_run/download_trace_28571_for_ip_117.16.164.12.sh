@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # This script will only run on a computer using the IP
-# address: 117.16.164.14.
+# address: 117.16.164.12.
 #
 # This auto-generated script was downloaded from http://iotta.snia.org.
 # It will download the trace YCSB RocksDB SSD Traces Part 00#
@@ -14,8 +14,8 @@ cat >> $cookies << 'EOF'
 
 .iotta.snia.org	TRUE	/	FALSE	0	infodigest	1847aa8856387a26b411b55c9fe5e7d55039b919
 .iotta.snia.org	TRUE	/	FALSE	0	legal	true
-.iotta.snia.org	TRUE	/	FALSE	0	id	844964
-.iotta.snia.org	TRUE	/	FALSE	0	user_ip	117.16.164.14
+.iotta.snia.org	TRUE	/	FALSE	0	id	844967
+.iotta.snia.org	TRUE	/	FALSE	0	user_ip	117.16.164.12
 EOF
 
 if which wget >/dev/null 2>&1; then
@@ -64,7 +64,7 @@ downloadFile() {
     if $delete; then
       echo "There was an error downloading the file ($file)"
       if grep "internal iotta error: ip mismatch" "$file" > /dev/null; then
-        echo "This script will only run on a computer with the IP address 117.16.164.14."
+        echo "This script will only run on a computer with the IP address 117.16.164.12."
         grep "Your current IP address is" "$file"
         echo "Please use the following link to fill out the download license form with your current IP address and run the new script:"
         echo "$downloadLink"
